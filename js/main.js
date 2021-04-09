@@ -15,6 +15,7 @@ function makeGalleryImages(galleryImages) {
     href="${image.original}"
   >
     <img
+    
       class="gallery__image"
       src="${image.preview}"
       data-source="${image.original}"
@@ -66,7 +67,7 @@ function removeEvent () {
 }
 
 function onArrowRightKeyPress(evt) {
-   console.log(evt.code);
+  
    if (evt.code === "ArrowRight") {
 
       for (let index = 0; index < galleryImages.length; index++) {
@@ -91,7 +92,6 @@ function onArrowLeftKeyPress(evt) {
          if (refs.imageModalEl.src === galleryImages[0].original) {
             refs.imageModalEl.src = galleryImages[galleryImages.length-1].original
          break
-           
          };
          if (refs.imageModalEl.src === galleryImages[index].original) {
               refs.imageModalEl.src = galleryImages[index - 1].original;
