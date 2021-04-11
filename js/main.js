@@ -33,13 +33,15 @@ refs.buttonModalEl.addEventListener('click', closeGalleryModal);
 
 function openGalleryModal(evt) {
    evt.preventDefault();
+if(evt.target.nodeName === 'IMG'){
+
    refs.imageModalEl.src = evt.target.dataset.source;
    refs.divModalEl.classList.add('is-open');
 
    window.addEventListener('keydown', onEscKeyPress);
    window.addEventListener('keydown', onArrowLeftKeyPress);
    window.addEventListener('keydown', onArrowRightKeyPress);
- 
+ }
 };
 
 function onOverlayClick(evt) {
